@@ -40,7 +40,7 @@ export function Features() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium max-w-full mx-auto">
             <span>Integrações disponíveis:</span>
             <Badge variant="secondary" className="text-xs">
               WhatsApp API

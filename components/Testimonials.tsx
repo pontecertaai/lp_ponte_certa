@@ -64,7 +64,7 @@ export function Testimonials() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium max-w-full mx-auto">
             <span>Resultados médios dos clientes:</span>
             <Badge variant="secondary" className="text-xs">
               +35% agendamentos

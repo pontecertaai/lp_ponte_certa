@@ -61,15 +61,15 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Contato</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <p>contato@pontecerta.ai</p>
-              <p>+55 (11) 99999-9999</p>
-              <p>São Paulo, SP - Brasil</p>
+              <p>contato@pontecertaai.com.br</p>
+              <p>+55 (31) 99999-9999</p>
+              <p>Minas Gerais, MG - Brasil</p>
             </div>
           </div>
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; 2024 PonteCerta AI. Todos os direitos reservados.</p>
+          <p>&copy; 2025 PonteCerta AI. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

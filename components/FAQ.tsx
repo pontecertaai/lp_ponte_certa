@@ -75,7 +75,7 @@ export function FAQ() {
           <p className="text-muted-foreground mb-4">
             Ainda tem dúvidas? Fale conosco no WhatsApp ou agende um diagnóstico gratuito.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium max-w-full mx-auto">
             <span>Suporte especializado:</span>
             <span>contato@pontecerta.ai</span>
           </div>

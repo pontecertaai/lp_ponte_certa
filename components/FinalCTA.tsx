@@ -40,7 +40,7 @@ export function FinalCTA() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm opacity-80">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-6 text-sm opacity-80">
             <div className="flex items-center justify-center gap-2">
               <Calendar className="w-4 h-4" />
               <span>Agendamento flexível</span>

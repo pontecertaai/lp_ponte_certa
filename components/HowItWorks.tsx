@@ -56,7 +56,7 @@ export function HowItWorks() {
               <div key={index} className="relative">
                 {/* Linha conectora */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-border -translate-x-1/2 z-0" />
+                  <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-border -translate-x-1/2 z-0" />
                 )}
                 
                 <div className="relative z-10 bg-card p-6 rounded-lg border text-center">
@@ -82,7 +82,7 @@ export function HowItWorks() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium max-w-full mx-auto">
             <span>Tempo médio de implantação:</span>
             <Badge variant="secondary" className="text-xs">
               3-5 dias úteis

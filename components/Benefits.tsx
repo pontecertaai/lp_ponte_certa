@@ -75,7 +75,7 @@ export function Benefits() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium max-w-full mx-auto">
             <span>Diferenciais únicos:</span>
             <Badge variant="secondary" className="text-xs">
               Foco em qualificação
