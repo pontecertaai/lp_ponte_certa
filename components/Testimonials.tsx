@@ -1,27 +1,22 @@
 import { Badge } from "@/components/ui/badge";
-import { Star } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
-const testimonials = [
+const reasons = [
   {
-    name: "Maria Silva",
-    role: "Diretora Comercial",
-    company: "Imobiliária Premium",
-    content: "A PonteCerta AI revolucionou nosso atendimento. Agora recebemos apenas leads realmente interessados em comprar. Nossa taxa de conversão aumentou 40%.",
-    rating: 5,
+    title: "Processo claro: diagnóstico → implantação → acompanhamento",
+    description: "Você sabe exatamente o que acontece em cada etapa.",
   },
   {
-    name: "João Santos",
-    role: "Gerente de Vendas",
-    company: "Resort Paradise",
-    content: "O atendimento 24/7 é fantástico. Não perdemos mais nenhum lead por estar fora do horário comercial. A integração com nosso CRM foi perfeita.",
-    rating: 5,
+    title: "Sem promessas irreais",
+    description: "Automação simples, aplicada ao seu dia a dia e ajustada com você.",
   },
   {
-    name: "Ana Costa",
-    role: "CEO",
-    company: "E-commerce Tech",
-    content: "A qualificação automática nos poupou horas de trabalho manual. Agora nosso time foca apenas em oportunidades quentes. ROI incrível!",
-    rating: 5,
+    title: "Você não fica sozinho",
+    description: "Acompanhamos e ajustamos para manter tudo funcionando.",
+  },
+  {
+    title: "Integrações práticas",
+    description: "Trabalhamos com o que você já usa, sem complicação.",
   },
 ];
 
@@ -31,51 +26,35 @@ export function Testimonials() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            Depoimentos
+            Por que confiar
           </Badge>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-            O que nossos clientes dizem
+            Por que confiar na PonteCerta AI?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Empresas que já transformaram seu funil de vendas com a PonteCerta AI.
+            Transparência, acompanhamento e foco no que funciona no atendimento.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {reasons.map((reason, index) => (
             <div key={index} className="bg-card p-6 rounded-lg border">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg">{reason.title}</h3>
               </div>
-              
-              <blockquote className="text-muted-foreground mb-6 italic">
-                &ldquo;{testimonial.content}&rdquo;
-              </blockquote>
-              
-              <div className="border-t pt-4">
-                <div className="font-semibold">{testimonial.name}</div>
-                <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                <div className="text-sm text-primary font-medium">{testimonial.company}</div>
-              </div>
+              <p className="text-muted-foreground">{reason.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium max-w-full mx-auto">
-            <span>Resultados médios dos clientes:</span>
-            <Badge variant="secondary" className="text-xs">
-              +35% agendamentos
-            </Badge>
-            <Badge variant="secondary" className="text-xs">
-              -20% CAC
-            </Badge>
-            <Badge variant="secondary" className="text-xs">
-              +40% conversão
-            </Badge>
-          </div>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Estamos no início e construindo casos reais. Quer ser um dos primeiros? Agende um
+            diagnóstico.
+          </p>
         </div>
       </div>
     </section>

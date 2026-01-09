@@ -20,16 +20,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://pontecerta.ai"),
   title: {
-    default: "PonteCerta AI — Qualificação de leads com IA no WhatsApp",
+    default: "PonteCerta AI — Automação simples para negócios que não podem perder clientes",
     template: "%s • PonteCerta AI",
   },
   description:
-    "Acelere seu funil com um agente de IA que qualifica e responde 24/7. Agende um diagnóstico gratuito.",
+    "Automação simples para organizar atendimento no WhatsApp. Diagnóstico, implantação e acompanhamento para pequenos negócios não perderem clientes.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "PonteCerta AI — Qualificação de leads com IA no WhatsApp",
+    title: "PonteCerta AI — Automação simples para negócios que não podem perder clientes",
     description:
-      "Acelere seu funil com um agente de IA que qualifica e responde 24/7.",
+      "Automação simples para organizar atendimento no WhatsApp. Diagnóstico, implantação e acompanhamento.",
     type: "website",
     url: "/",
     siteName: "PonteCerta AI",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PonteCerta AI",
     description:
-      "Acelere seu funil com um agente de IA que qualifica e responde 24/7.",
+      "Automação simples para organizar atendimento no WhatsApp. Diagnóstico, implantação e acompanhamento.",
   },
 };
 

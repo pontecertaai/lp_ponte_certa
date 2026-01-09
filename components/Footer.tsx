@@ -14,7 +14,7 @@ export function Footer() {
               <span className="font-semibold text-lg">PonteCerta AI</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Qualificação de leads com IA, direto no WhatsApp.
+              Automação simples para negócios que não podem perder clientes.
             </p>
           </div>
 
@@ -61,6 +61,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">Contato</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
+              {/* TODO: confirmar e atualizar dados de contato reais */}
               <p>contato@pontecertaai.com.br</p>
               <p>+55 (31) 99999-9999</p>
               <p>Minas Gerais, MG - Brasil</p>

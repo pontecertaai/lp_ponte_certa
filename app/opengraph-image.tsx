@@ -54,10 +54,10 @@ export default function OGImage() {
             <div style={{ fontSize: 32, fontWeight: 700 }}>PonteCerta AI</div>
           </div>
           <div style={{ fontSize: 64, fontWeight: 800, lineHeight: 1.1 }}>
-            Qualificação de leads com IA, direto no WhatsApp
+            Automação simples para negócios que não podem perder clientes
           </div>
           <div style={{ fontSize: 28, opacity: 0.9 }}>
-            Atendimento 24/7 que separa curiosos de reais compradores
+            Seu atendimento funcionando, mesmo quando você não pode
           </div>
         </div>
       </div>
@@ -65,5 +65,4 @@ export default function OGImage() {
     { ...size }
   );
 }
-
 

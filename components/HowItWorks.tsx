@@ -1,38 +1,34 @@
 import { Badge } from "@/components/ui/badge";
-import { MessageSquare, Settings, BarChart3, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MessageSquare, Settings, Users } from "lucide-react";
 
 const steps = [
   {
     step: "01",
     icon: MessageSquare,
-    title: "Cliente entra em contato",
-    description: "Via WhatsApp, site ou formulário. A IA responde instantaneamente, mesmo fora do horário comercial.",
-    detail: "Atendimento 24/7 sem perder nenhum lead",
+    title: "Diagnóstico rápido",
+    description: "Entendemos seu atendimento atual e os pontos onde você perde clientes.",
   },
   {
-    step: "02", 
+    step: "02",
     icon: Settings,
-    title: "Qualificação automática",
-    description: "Roteiros personalizados fazem as perguntas certas para identificar intenção e coletar informações relevantes.",
-    detail: "Configuração específica para seu segmento",
+    title: "Implantação da automação essencial",
+    description: "Configuramos fluxos simples no WhatsApp e integrações básicas.",
   },
   {
     step: "03",
-    icon: BarChart3,
-    title: "Análise e pontuação",
-    description: "IA analisa conversas, pontua leads e identifica oportunidades prontas para avançar no funil.",
-    detail: "MQL → SQL com dados completos",
-  },
-  {
-    step: "04",
     icon: Users,
-    title: "Hand-off para vendas",
-    description: "Leads qualificados são enviados automaticamente para seu CRM com todas as informações coletadas.",
-    detail: "Integração com HubSpot, Pipedrive, planilhas",
+    title: "Acompanhamento mensal",
+    description: "Ajustes e melhorias contínuas para manter tudo funcionando.",
   },
 ];
 
-export function HowItWorks() {
+type HowItWorksProps = {
+  primaryCtaHref?: string;
+  onPrimaryCta?: () => void;
+};
+
+export function HowItWorks({ primaryCtaHref = "#diagnostico", onPrimaryCta }: HowItWorksProps) {
   return (
     <section id="como-funciona" className="py-20">
       <div className="container mx-auto px-6">
@@ -41,15 +37,14 @@ export function HowItWorks() {
             Como Funciona
           </Badge>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-            De lead frio a oportunidade quente em 4 passos
+            Do caos do atendimento ao processo organizado, em 3 etapas
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nosso processo automatizado transforma cada contato em uma oportunidade qualificada
-            para seu time de vendas.
+            Um caminho simples para organizar o atendimento sem promessas exageradas.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -72,9 +67,6 @@ export function HowItWorks() {
                   
                   <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
                   <p className="text-muted-foreground text-sm mb-3">{step.description}</p>
-                  <Badge variant="outline" className="text-xs">
-                    {step.detail}
-                  </Badge>
                 </div>
               </div>
             );
@@ -82,12 +74,11 @@ export function HowItWorks() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium max-w-full mx-auto">
-            <span>Tempo médio de implantação:</span>
-            <Badge variant="secondary" className="text-xs">
-              3-5 dias úteis
-            </Badge>
-          </div>
+          <Button size="lg" className="bg-primary text-primary-foreground" asChild>
+            <a href={primaryCtaHref} onClick={onPrimaryCta}>
+              Agendar diagnóstico
+            </a>
+          </Button>
         </div>
       </div>
     </section>

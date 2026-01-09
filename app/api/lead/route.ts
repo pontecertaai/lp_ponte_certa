@@ -2,12 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
 const LeadSchema = z.object({
-  nome: z.string().min(2, "Nome deve ter pelo menos 3 caracteres"),
-  email: z.string().email("Email inválido"),
-  empresa: z.string().min(2, "Empresa deve ter pelo menos 2 caracteres"),
+  nome: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
   telefone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
-  cargo: z.string().optional(),
-  segmento: z.string().optional(),
+  segmento: z.string().min(1, "Selecione um segmento"),
+  mensagem: z.string().optional(),
   lgpd: z.boolean().refine((val) => val === true, "Você deve aceitar os termos de privacidade"),
 });
 

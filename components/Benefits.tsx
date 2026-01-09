@@ -1,36 +1,36 @@
 import { Badge } from "@/components/ui/badge";
-import { Clock, Target, Zap, BarChart3, TrendingUp } from "lucide-react";
+import { MessageCircle, Inbox, RefreshCcw, Plug, Handshake, CheckCircle } from "lucide-react";
 
 const benefits = [
   {
-    icon: Clock,
-    title: "Resposta imediata 24/7",
-    description: "Aumenta taxa de contato inicial com atendimento instantâneo, mesmo fora do horário comercial.",
-    metric: "+85% taxa de resposta",
+    icon: MessageCircle,
+    title: "Resposta rápida no WhatsApp",
+    description: "Seu cliente recebe retorno logo no primeiro contato, sem depender de horários.",
   },
   {
-    icon: Target,
-    title: "Roteiros de qualificação sob medida",
-    description: "Perguntas certas para cada nicho, identificando intenção e coletando informações relevantes.",
-    metric: "Personalizado por segmento",
+    icon: Inbox,
+    title: "Atendimento organizado (sem perder mensagens)",
+    description: "Centralizamos conversas e criamos um padrão simples para a equipe seguir.",
   },
   {
-    icon: Zap,
-    title: "Integração com CRM/planilha",
-    description: "Hand-off limpo para seu time de vendas com todos os dados coletados durante a conversa.",
-    metric: "Integração automática",
+    icon: RefreshCcw,
+    title: "Follow-up automático para quem não respondeu",
+    description: "Lembretes e retornos automáticos para não deixar oportunidades pelo caminho.",
   },
   {
-    icon: BarChart3,
-    title: "Relatórios e insights básicos",
-    description: "Entenda gargalos do funil e otimize seu processo de qualificação de leads.",
-    metric: "Dashboard completo",
+    icon: Plug,
+    title: "Integrações simples (planilha/CRM)",
+    description: "Conectamos com o que você já usa, sem projetos longos ou complexos.",
   },
   {
-    icon: TrendingUp,
-    title: "Redução de CAC e velocidade",
-    description: "Ganho de velocidade no MQL → SQL com leads já qualificados e prontos para venda.",
-    metric: "-20% CAC médio",
+    icon: Handshake,
+    title: "Acompanhamento mensal (você não fica sozinho)",
+    description: "Ajustes recorrentes para manter o atendimento funcionando no dia a dia.",
+  },
+  {
+    icon: CheckCircle,
+    title: "Automação que funciona no dia a dia",
+    description: "Fluxos simples, claros e fáceis de manter.",
   },
 ];
 
@@ -40,14 +40,13 @@ export function Benefits() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            Benefícios Comprovados
+            Benefícios
           </Badge>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Por que escolher a PonteCerta AI?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nossa solução foi desenvolvida especificamente para qualificação de leads,
-            não apenas chatbots genéricos.
+            Automação simples com acompanhamento para organizar seu atendimento no WhatsApp.
           </p>
         </div>
 
@@ -66,26 +65,14 @@ export function Benefits() {
                   <h3 className="font-semibold text-lg">{benefit.title}</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">{benefit.description}</p>
-                <Badge variant="outline" className="text-xs">
-                  {benefit.metric}
-                </Badge>
               </div>
             );
           })}
         </div>
 
         <div className="mt-16 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium max-w-full mx-auto">
-            <span>Diferenciais únicos:</span>
-            <Badge variant="secondary" className="text-xs">
-              Foco em qualificação
-            </Badge>
-            <Badge variant="secondary" className="text-xs">
-              Configuração guiada
-            </Badge>
-            <Badge variant="secondary" className="text-xs">
-              Sem lock-in
-            </Badge>
+          <div className="inline-flex items-center justify-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium max-w-full mx-auto">
+            Clareza, consistência e mais agilidade no atendimento (sem promessas irreais).
           </div>
         </div>
       </div>

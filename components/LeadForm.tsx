@@ -11,23 +11,18 @@ import { Loader2, CheckCircle } from "lucide-react";
 
 const LeadFormSchema = z.object({
   nome: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
-  email: z.string().email("Email inválido"),
-  empresa: z.string().min(2, "Empresa deve ter pelo menos 2 caracteres"),
   telefone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
-  cargo: z.string().optional(),
-  segmento: z.string().optional(),
+  segmento: z.string().min(1, "Selecione um segmento"),
+  mensagem: z.string().optional(),
   lgpd: z.boolean().refine((val) => val === true, "Você deve aceitar os termos de privacidade"),
 });
 
 type LeadFormData = z.infer<typeof LeadFormSchema>;
 
 const segmentos = [
-  "Imobiliária",
-  "Resort/Hotel",
-  "E-commerce",
-  "Serviços Locais",
-  "Saúde",
-  "Educação",
+  "Clínicas",
+  "Imobiliárias",
+  "Prestadores de serviço premium",
   "Outros",
 ];
 
@@ -60,7 +55,7 @@ export function LeadForm() {
 
       if (result.success) {
         setIsSuccess(true);
-        toast.success("Obrigado! Em breve entraremos em contato para confirmar seu diagnóstico.");
+        toast.success("Obrigado! Em breve entraremos em contato para agendar seu diagnóstico.");
         reset();
       } else {
         toast.error(result.message || "Ops, algo deu errado. Tente novamente ou fale conosco no WhatsApp.");
@@ -79,7 +74,7 @@ export function LeadForm() {
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
         <h3 className="text-xl font-semibold">Formulário enviado com sucesso!</h3>
         <p className="text-muted-foreground">
-          Em breve entraremos em contato para confirmar seu diagnóstico.
+          Em breve entraremos em contato para agendar seu diagnóstico.
         </p>
         <Button 
           onClick={() => setIsSuccess(false)}
@@ -97,12 +92,12 @@ export function LeadForm() {
       <div className="space-y-4">
         <div>
           <label htmlFor="nome" className="block text-sm font-medium mb-2">
-            Nome completo *
+            Nome *
           </label>
           <Input
             id="nome"
             {...register("nome")}
-            placeholder="Seu nome completo"
+            placeholder="Seu nome"
             className={errors.nome ? "border-red-500" : ""}
           />
           {errors.nome && (
@@ -111,39 +106,8 @@ export function LeadForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
-            Email *
-          </label>
-          <Input
-            id="email"
-            type="email"
-            {...register("email")}
-            placeholder="seu@email.com"
-            className={errors.email ? "border-red-500" : ""}
-          />
-          {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-          )}
-        </div>
-
-        <div>
-          <label htmlFor="empresa" className="block text-sm font-medium mb-2">
-            Empresa *
-          </label>
-          <Input
-            id="empresa"
-            {...register("empresa")}
-            placeholder="Nome da sua empresa"
-            className={errors.empresa ? "border-red-500" : ""}
-          />
-          {errors.empresa && (
-            <p className="text-red-500 text-sm mt-1">{errors.empresa.message}</p>
-          )}
-        </div>
-
-        <div>
           <label htmlFor="telefone" className="block text-sm font-medium mb-2">
-            WhatsApp/Telefone *
+            WhatsApp *
           </label>
           <Input
             id="telefone"
@@ -157,19 +121,8 @@ export function LeadForm() {
         </div>
 
         <div>
-          <label htmlFor="cargo" className="block text-sm font-medium mb-2">
-            Cargo
-          </label>
-          <Input
-            id="cargo"
-            {...register("cargo")}
-            placeholder="Seu cargo na empresa"
-          />
-        </div>
-
-        <div>
           <label htmlFor="segmento" className="block text-sm font-medium mb-2">
-            Segmento
+            Segmento *
           </label>
           <select
             id="segmento"
@@ -183,6 +136,22 @@ export function LeadForm() {
               </option>
             ))}
           </select>
+          {errors.segmento && (
+            <p className="text-red-500 text-sm mt-1">{errors.segmento.message}</p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="mensagem" className="block text-sm font-medium mb-2">
+            Mensagem (opcional)
+          </label>
+          <textarea
+            id="mensagem"
+            {...register("mensagem")}
+            rows={4}
+            placeholder="Qual o principal problema no atendimento hoje?"
+            className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground"
+          />
         </div>
       </div>
 
@@ -224,7 +193,7 @@ export function LeadForm() {
       </Button>
 
       <p className="text-xs text-muted-foreground text-center">
-        Diagnóstico gratuito de 30-45 minutos
+        Diagnóstico focado no seu atendimento, sem promessas irreais
       </p>
     </form>
   );
