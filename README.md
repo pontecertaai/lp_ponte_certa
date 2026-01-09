@@ -1,5 +1,5 @@
 # PonteCerta AI — Landing Page
-
+ 
 Stack: Next.js 15 (App Router) + TypeScript + Tailwind v4 + shadcn/ui + RHF/Zod + Framer Motion + Vercel Analytics.
 
 ## Desenvolvimento
