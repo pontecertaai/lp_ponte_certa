@@ -62,8 +62,15 @@ export function Footer() {
             <h3 className="font-semibold">Contato</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
               {/* TODO: confirmar e atualizar dados de contato reais */}
-              <p>contato@pontecertaai.com.br</p>
-              <p>+55 (31) 99999-9999</p>
+              <p>pontecertaai@gmail.com</p>
+              <a
+                href="https://wa.me/5531990888159?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ponte%20Certa%20AI%20e%20gostaria%20de%20entender%20melhor%20como%20funciona%20a%20automa%C3%A7%C3%A3o%20de%20atendimento.%20%F0%9F%98%8A"
+                className="hover:text-foreground transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +55 (31) 99088-8159
+              </a>
               <p>Minas Gerais, MG - Brasil</p>
             </div>
           </div>
