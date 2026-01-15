@@ -64,7 +64,7 @@ export function Footer() {
               {/* TODO: confirmar e atualizar dados de contato reais */}
               <p>pontecertaai@gmail.com</p>
               <a
-                href="https://wa.me/5531990888159?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ponte%20Certa%20AI%20e%20gostaria%20de%20entender%20melhor%20como%20funciona%20a%20automa%C3%A7%C3%A3o%20de%20atendimento.%20%F0%9F%98%8A"
+                href="https://wa.me/5531990888159?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Ponte%20Certa%20AI%20e%20gostaria%20de%20entender%20melhor%20como%20funciona%20a%20automa%C3%A7%C3%A3o%20de%20atendimento."
                 className="hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
